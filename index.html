@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Satisfaction Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form class="survey-form" id="surveyForm">
+            <h1>Customer Satisfaction Survey</h1>
+            <p class="intro-text">We'd love to hear your feedback!</p>
+
+            <!-- Personal Information Section -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+            </fieldset>
+
+            <!-- Experience Section -->
+            <fieldset>
+                <legend>Your Experience</legend>
+
+                <div class="form-group">
+                    <label for="rating">Overall Satisfaction *</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">-- Select --</option>
+                        <option value="very-satisfied">Very Satisfied</option>
+                        <option value="satisfied">Satisfied</option>
+                        <option value="neutral">Neutral</option>
+                        <option value="dissatisfied">Dissatisfied</option>
+                        <option value="very-dissatisfied">Very Dissatisfied</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>How likely are you to recommend us? *</label>
+                    <div class="radio-group">
+                        <div>
+                            <input type="radio" id="likely-yes" name="recommend" value="yes" required>
+                            <label for="likely-yes">Very Likely</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="likely-maybe" name="recommend" value="maybe">
+                            <label for="likely-maybe">Maybe</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="likely-no" name="recommend" value="no">
+                            <label for="likely-no">Not Likely</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments" rows="5" placeholder="Please share any additional feedback..."></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Preferences Section -->
+            <fieldset>
+                <legend>What did you like? (Select all that apply)</legend>
+                
+                <div class="checkbox-group">
+                    <div>
+                        <input type="checkbox" id="quality" name="preferences" value="quality">
+                        <label for="quality">Product/Service Quality</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="price" name="preferences" value="price">
+                        <label for="price">Competitive Pricing</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="support" name="preferences" value="support">
+                        <label for="support">Customer Support</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="delivery" name="preferences" value="delivery">
+                        <label for="delivery">Fast Delivery</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Submit Section -->
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Submit Survey</button>
+                <button type="reset" class="btn-reset">Clear Form</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for completing the survey!');
+            // Here you would typically send the data to a server
+            this.reset();
+        });
+    </script>
+</body>
+</html>

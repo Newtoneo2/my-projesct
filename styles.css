@@ -1,0 +1,212 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Form Styles */
+.survey-form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+}
+
+.survey-form h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.intro-text {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Fieldset Styles */
+fieldset {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin-bottom: 30px;
+    padding: 20px 0 0 0;
+}
+
+fieldset:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Radio Group Styles */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.radio-group div {
+    display: flex;
+    align-items: center;
+}
+
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+}
+
+.radio-group label,
+.checkbox-group label {
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/* Checkbox Group Styles */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkbox-group div {
+    display: flex;
+    align-items: center;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.btn-submit,
+.btn-reset {
+    flex: 1;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit {
+    background-color: #667eea;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #5568d3;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(2px);
+}
+
+.btn-reset {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn-reset:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-reset:active {
+    transform: translateY(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .survey-form {
+        padding: 25px;
+    }
+
+    .survey-form h1 {
+        font-size: 24px;
+    }
+
+    legend {
+        font-size: 16px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-submit,
+    .btn-reset {
+        width: 100%;
+    }
+}
